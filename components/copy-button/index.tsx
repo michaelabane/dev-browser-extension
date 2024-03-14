@@ -8,7 +8,9 @@ type CopyButtonProps = {
 export const CopyButton = (props: CopyButtonProps) => {
   const { onClick, hasCopied } = props
   return (
-    <button onClick={onClick} style={{ marginTop: 8, width: "100%" }}>
+    <button
+      onClick={onClick}
+      className="mt-2 w-full bg-slate-200 p-1 rounded-sm">
       {hasCopied ? "Copied!" : "Copy to Clipboard"}
     </button>
   )

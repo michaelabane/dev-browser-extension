@@ -9,6 +9,8 @@ import {
   Technology
 } from "~components"
 
+import "./style.css"
+
 function IndexPopup() {
   return (
     <PopupContainer>

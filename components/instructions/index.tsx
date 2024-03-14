@@ -6,14 +6,5 @@ type InstructionsProps = {
 
 export const Instructions = (props: InstructionsProps) => {
   const { children } = props
-  return (
-    <p
-      style={{
-        textAlign: "center",
-        fontSize: 12,
-        color: "gray"
-      }}>
-      {children}
-    </p>
-  )
+  return <p className="text-center text-xs text-gray-500 mb-1">{children}</p>
 }

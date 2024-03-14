@@ -27,17 +27,13 @@ export const Technology = () => {
       <Instructions>Copy technology description</Instructions>
       <label
         htmlFor="field-select"
-        style={{
-          textTransform: "uppercase",
-          color: "gray",
-          fontSize: 8
-        }}>
+        className="text-[8px] uppercase text-gray-500 mb-0 mt-1">
         Industry Field
       </label>
       <select
         value={selectedOption}
         onChange={(e) => setSelectedOption(e.target.value)}
-        style={{ width: "100%" }}
+        className="w-full bg-slate-100 p-1 rounded-sm"
         id="field-select">
         {SELECT_OPTIONS.map((option) => (
           <option key={option.value} value={option.value}>

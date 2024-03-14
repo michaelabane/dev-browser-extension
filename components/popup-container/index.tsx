@@ -6,13 +6,5 @@ type PopupContainerProps = {
 
 export const PopupContainer = (props: PopupContainerProps) => {
   const { children } = props
-  return (
-    <div
-      style={{
-        padding: 16,
-        width: 250
-      }}>
-      {children}
-    </div>
-  )
+  return <div className="p-4 w-[250px]">{children}</div>
 }
