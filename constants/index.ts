@@ -1,3 +1,18 @@
+export const SELECT_OPTIONS = [
+  { value: "random", label: "Random" },
+  { value: "healthcare", label: "Healthcare" },
+  { value: "agriculture", label: "Agriculture" },
+  { value: "environment", label: "Environment" },
+  { value: "energy", label: "Energy" },
+  { value: "space", label: "Space" },
+  { value: "defense", label: "Defense" },
+  { value: "education", label: "Education" },
+  { value: "transportation", label: "Transportation" },
+  { value: "ocean_sciences", label: "Ocean Sciences" },
+  { value: "measurement_techniques", label: "Measurement Techniques" },
+  { value: "homeland_security", label: "Homeland Security" }
+]
+
 const HEALTHCARE =
   "In healthcare, nanobot-assisted surgery represents a groundbreaking advancement. These microscopic robots, when injected into the bloodstream, can perform precise surgical procedures at a cellular level, reducing the need for invasive surgeries. They can target tumor removal, repair damaged tissues, and deliver medication directly to affected areas, minimizing recovery times and enhancing treatment effectiveness. This innovation holds the potential to revolutionize patient outcomes, offering a less intrusive, more accurate, and highly personalized approach to medical interventions."
 const AGRICULTURE =
@@ -21,7 +36,7 @@ const MEASUREMENT_TECHNIQUES =
 const HOMELAND_SECURITY =
   "In homeland security, AI-enhanced biometric screening is a significant advancement, bolstering the effectiveness and efficiency of identity verification processes. Integrating AI with biometric technologies like facial recognition, fingerprint analysis, and iris scanning enhances the ability to quickly and accurately identify individuals. This integration is crucial for border control, airport security, and access to sensitive areas, where rapid yet accurate identification is paramount. The technology also incorporates machine learning algorithms to continuously improve accuracy and adapt to new threats, representing a significant step forward in ensuring the safety and security of nations in an increasingly digital and interconnected world."
 
-export const constants = {
+export const TECHNOLOGIES_BY_FIELD = {
   healthcare: HEALTHCARE,
   agriculture: AGRICULTURE,
   environment: ENVIRONMENT,
@@ -35,7 +50,7 @@ export const constants = {
   homeland_security: HOMELAND_SECURITY
 }
 
-export const keywordPhrases = [
+export const KEYWORD_PHRASES = [
   "Quantum computing applications",
   "Renewable energy sources",
   "Machine learning algorithms",
@@ -63,7 +78,7 @@ export const keywordPhrases = [
   "3D printing in construction"
 ]
 
-export const companyBiographies = [
+export const COMPANY_BIOGRAPHIES = [
   "Avalon AI leverages cutting-edge artificial intelligence to revolutionize the healthcare industry by providing predictive analytics for early diagnosis of chronic diseases. By integrating AI with medical imaging, Avalon AI enables healthcare professionals to detect conditions like cancer at their nascent stages, significantly improving patient outcomes while reducing healthcare costs. Their innovative approach combines deep learning and diagnostic expertise to offer a groundbreaking tool in medical diagnostics.",
 
   "GreenSynth specializes in sustainable chemical manufacturing, utilizing advanced biotechnology to create eco-friendly alternatives to traditional petrochemical products. Their innovative process harnesses the power of microorganisms to convert renewable resources into high-quality bioplastics and biochemicals, reducing the carbon footprint of the chemical industry. GreenSynth's commitment to sustainability and innovation positions them as a leader in green chemistry, helping industries transition to more environmentally responsible practices.",
