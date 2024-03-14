@@ -8,7 +8,7 @@ export const CompanyBiography = () => {
 
   return (
     <div>
-      <Instructions>Copy a company biography to your clipboard</Instructions>
+      <Instructions>Copy company biography</Instructions>
       <CopyButton onClick={handleCopyToClipboard} hasCopied={hasCopied} />
     </div>
   )

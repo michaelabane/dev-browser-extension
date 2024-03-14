@@ -24,11 +24,9 @@ export const Technology = () => {
 
   return (
     <div>
-      <Instructions>
-        Copy a technology description to your clipboard
-      </Instructions>
+      <Instructions>Copy technology description</Instructions>
       <label
-        htmlFor="select"
+        htmlFor="field-select"
         style={{
           textTransform: "uppercase",
           color: "gray",
@@ -39,7 +37,8 @@ export const Technology = () => {
       <select
         value={selectedOption}
         onChange={(e) => setSelectedOption(e.target.value)}
-        style={{ width: "100%" }}>
+        style={{ width: "100%" }}
+        id="field-select">
         {SELECT_OPTIONS.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
