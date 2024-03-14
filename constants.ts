@@ -34,3 +34,53 @@ export const constants = {
   measurement_techniques: MEASUREMENT_TECHNIQUES,
   homeland_security: HOMELAND_SECURITY
 }
+
+export const keywordPhrases = [
+  "Quantum computing applications",
+  "Renewable energy sources",
+  "Machine learning algorithms",
+  "CRISPR gene editing",
+  "Nanotechnology advancements",
+  "Artificial intelligence ethics",
+  "Aerospace engineering breakthroughs",
+  "Cybersecurity threat analysis",
+  "Biometric authentication technology",
+  "Autonomous vehicle technology",
+  "Blockchain in healthcare",
+  "Virtual reality training",
+  "Robotics in surgery",
+  "Climate change modeling",
+  "Data mining techniques",
+  "Smart grid technology",
+  "Synthetic biology applications",
+  "Photonics and optoelectronics",
+  "Deep learning in diagnostics",
+  "Sustainable urban planning",
+  "Neuroinformatics research",
+  "Space exploration innovations",
+  "Wireless power transfer",
+  "Environmental DNA analysis",
+  "3D printing in construction"
+]
+
+export const companyBiographies = [
+  "Avalon AI leverages cutting-edge artificial intelligence to revolutionize the healthcare industry by providing predictive analytics for early diagnosis of chronic diseases. By integrating AI with medical imaging, Avalon AI enables healthcare professionals to detect conditions like cancer at their nascent stages, significantly improving patient outcomes while reducing healthcare costs. Their innovative approach combines deep learning and diagnostic expertise to offer a groundbreaking tool in medical diagnostics.",
+
+  "GreenSynth specializes in sustainable chemical manufacturing, utilizing advanced biotechnology to create eco-friendly alternatives to traditional petrochemical products. Their innovative process harnesses the power of microorganisms to convert renewable resources into high-quality bioplastics and biochemicals, reducing the carbon footprint of the chemical industry. GreenSynth's commitment to sustainability and innovation positions them as a leader in green chemistry, helping industries transition to more environmentally responsible practices.",
+
+  "QuantumNet is a pioneer in quantum computing, offering cloud-based quantum computing services to businesses and researchers. Their state-of-the-art quantum processors provide unparalleled computational power, enabling users to tackle complex problems in optimization, cryptography, and material science. QuantumNet's platform is designed to be user-friendly, making quantum computing accessible to a broader audience and accelerating innovation across various sectors.",
+
+  "SkyEye Innovations is revolutionizing the field of remote sensing with their fleet of advanced drones equipped with AI-powered analysis tools. Their technology provides real-time, high-resolution data for agriculture, environmental monitoring, and urban planning, enabling precise decision-making and resource management. SkyEye's commitment to innovation and sustainability is driving advancements in data collection and analysis, empowering industries to make more informed and impactful choices.",
+
+  "NanoMed is a trailblazer in nanotechnology, developing targeted drug delivery systems that improve the efficacy and reduce the side effects of treatments. Their platform utilizes nanoscale carriers to deliver therapeutics directly to diseased cells, offering a new level of precision in medicine. NanoMed's groundbreaking approach has the potential to transform treatment protocols for a range of conditions, making healthcare more personalized and effective.",
+
+  "EcoCharge is at the forefront of energy innovation, creating efficient, sustainable battery solutions for the renewable energy sector. Their cutting-edge batteries are designed to store solar and wind energy, enabling a more reliable and consistent power supply. EcoCharge's technology supports the transition to green energy, contributing to a reduction in carbon emissions and fostering a sustainable future.",
+
+  "DataDive specializes in big data analytics, providing businesses with powerful insights to drive decision-making. Their platform employs advanced machine learning algorithms to analyze vast datasets, uncovering trends and patterns that can inform strategy and optimize operations. DataDive's services empower companies to harness the full potential of their data, driving growth and efficiency in an increasingly digital world.",
+
+  "RoboBuild is transforming the construction industry with their autonomous construction robots. These robots increase efficiency and safety on construction sites, performing tasks from material handling to assembly. RoboBuild's innovative approach reduces labor costs and project timelines, while also improving worker safety and quality control in construction projects.",
+
+  "AeroSpaceX is a dynamic startup focusing on developing sustainable propulsion technologies for space exploration. Their eco-friendly rocket engines aim to minimize the environmental impact of space launches, using novel fuel sources and advanced engineering to reduce emissions and waste. AeroSpaceX's commitment to sustainability and innovation is paving the way for cleaner, more responsible space travel.",
+
+  "CyberSecure is a cutting-edge cybersecurity firm that provides advanced protection for digital assets and IT infrastructure. Using machine learning and AI, they offer real-time threat detection and response, safeguarding businesses from evolving cyber threats. CyberSecure's proactive approach ensures that companies can operate confidently in a digital landscape, protecting their data, reputation, and bottom line."
+]

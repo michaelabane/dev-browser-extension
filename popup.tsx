@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import { constants } from "./constants"
+import { companyBiographies, constants, keywordPhrases } from "./constants"
 
 const selectOptions = [
   { value: "random", label: "Random" },
@@ -20,6 +20,9 @@ const selectOptions = [
 function IndexPopup() {
   const [selectedOption, setSelectedOption] = useState("random")
   const [hasCopied, setHasCopied] = useState(false)
+  const [hasCopiedKeyword, setHasCopiedKeyword] = useState(false)
+  const [hasCopiedCompanyBiography, setHasCopiedCompanyBiography] =
+    useState(false)
 
   const handleCopyOptionToClipboard = () => {
     let textToCopy = ""
@@ -33,6 +36,26 @@ function IndexPopup() {
     setHasCopied(true)
     setTimeout(() => {
       setHasCopied(false)
+    }, 1500)
+  }
+
+  const handleCopyRandomKeywordToClipboard = () => {
+    const randomIndex = Math.floor(Math.random() * keywordPhrases.length)
+    const textToCopy = keywordPhrases[randomIndex]
+    navigator.clipboard.writeText(textToCopy)
+    setHasCopiedKeyword(true)
+    setTimeout(() => {
+      setHasCopiedKeyword(false)
+    }, 1500)
+  }
+
+  const handleCopyRandomCompanyBiographyToClipboard = () => {
+    const randomIndex = Math.floor(Math.random() * companyBiographies.length)
+    const textToCopy = companyBiographies[randomIndex]
+    navigator.clipboard.writeText(textToCopy)
+    setHasCopiedCompanyBiography(true)
+    setTimeout(() => {
+      setHasCopiedCompanyBiography(false)
     }, 1500)
   }
 
@@ -84,6 +107,52 @@ function IndexPopup() {
           onClick={handleCopyOptionToClipboard}
           style={{ marginTop: 8, width: "100%" }}>
           {hasCopied ? "Copied!" : "Copy to Clipboard"}
+        </button>
+      </div>
+      <hr
+        style={{
+          marginTop: 16,
+          marginBottom: 16,
+          border: "none",
+          borderBottom: "1px solid #ddd"
+        }}
+      />
+      <div>
+        <p
+          style={{
+            textAlign: "center",
+            fontSize: 12,
+            color: "gray"
+          }}>
+          Copy a random keyword phrase to your clipboard
+        </p>
+        <button
+          onClick={handleCopyRandomKeywordToClipboard}
+          style={{ marginTop: 8, width: "100%" }}>
+          {hasCopiedKeyword ? "Copied!" : "Copy to Clipboard"}
+        </button>
+      </div>
+      <hr
+        style={{
+          marginTop: 16,
+          marginBottom: 16,
+          border: "none",
+          borderBottom: "1px solid #ddd"
+        }}
+      />
+      <div>
+        <p
+          style={{
+            textAlign: "center",
+            fontSize: 12,
+            color: "gray"
+          }}>
+          Copy a company biography to your clipboard
+        </p>
+        <button
+          onClick={handleCopyRandomCompanyBiographyToClipboard}
+          style={{ marginTop: 8, width: "100%" }}>
+          {hasCopiedCompanyBiography ? "Copied!" : "Copy to Clipboard"}
         </button>
       </div>
     </div>
