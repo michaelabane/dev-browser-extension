@@ -1,5 +1,5 @@
-import { CopyButton, Instructions } from "~components"
-import { SELECT_OPTIONS, TECHNOLOGIES_BY_FIELD } from "~constants"
+import { CopyButton, FieldSelect, Instructions } from "~components"
+import { TECHNOLOGIES_BY_FIELD } from "~constants"
 import { useCopySelectToClipboard } from "~hooks"
 
 export const Technology = () => {
@@ -13,22 +13,10 @@ export const Technology = () => {
   return (
     <div>
       <Instructions>Technology description</Instructions>
-      <label
-        htmlFor="field-select"
-        className="text-[8px] uppercase text-gray-500 mb-0 mt-1">
-        Industry
-      </label>
-      <select
+      <FieldSelect
         value={selectedOption}
         onChange={(e) => setSelectedOption(e.target.value)}
-        className="w-full bg-slate-100 p-1 rounded-sm"
-        id="field-select">
-        {SELECT_OPTIONS.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
+      />
       <CopyButton onClick={handleCopyOptionToClipboard} hasCopied={hasCopied} />
     </div>
   )
