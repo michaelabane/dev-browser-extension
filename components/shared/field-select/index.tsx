@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 
 import { SELECT_OPTIONS } from "~constants"
 
@@ -7,7 +7,7 @@ type FieldSelectProps = {
   onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void
 }
 
-export const FieldSelect = (props: FieldSelectProps) => {
+export const FieldSelect = memo((props: FieldSelectProps) => {
   const { value, onChange } = props
   return (
     <>
@@ -29,4 +29,4 @@ export const FieldSelect = (props: FieldSelectProps) => {
       </select>
     </>
   )
-}
+})

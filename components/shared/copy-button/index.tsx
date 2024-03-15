@@ -1,12 +1,13 @@
-import React from "react"
+import React, { memo } from "react"
 
 type CopyButtonProps = {
   onClick: () => void
   hasCopied: boolean
 }
 
-export const CopyButton = (props: CopyButtonProps) => {
+export const CopyButton = memo((props: CopyButtonProps) => {
   const { onClick, hasCopied } = props
+
   return (
     <button
       onClick={onClick}
@@ -14,4 +15,4 @@ export const CopyButton = (props: CopyButtonProps) => {
       {hasCopied ? "Copied!" : "Copy"}
     </button>
   )
-}
+})

@@ -1,5 +1,5 @@
 import { CopyButton, FieldSelect, Instructions } from "~components"
-import { PROJECT_TITLES_BY_FIELD, SELECT_OPTIONS } from "~constants"
+import { PROJECT_TITLES_BY_FIELD } from "~constants"
 import { useCopySelectToClipboard } from "~hooks"
 
 export const ProjectTitle = () => {
