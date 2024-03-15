@@ -1,26 +1,14 @@
-import React, { useState } from "react"
-
 import { CopyButton, Instructions } from "~components"
 import { SELECT_OPTIONS, TECHNOLOGIES_BY_FIELD } from "~constants"
+import { useCopySelectToClipboard } from "~hooks"
 
 export const Technology = () => {
-  const [selectedOption, setSelectedOption] = useState("random")
-  const [hasCopied, setHasCopied] = useState(false)
-
-  const handleCopyOptionToClipboard = () => {
-    let textToCopy = ""
-    if (selectedOption === "random") {
-      const randomIndex = Math.floor(Math.random() * SELECT_OPTIONS.length)
-      textToCopy = TECHNOLOGIES_BY_FIELD[SELECT_OPTIONS[randomIndex].value]
-    } else {
-      textToCopy = TECHNOLOGIES_BY_FIELD[selectedOption]
-    }
-    navigator.clipboard.writeText(textToCopy)
-    setHasCopied(true)
-    setTimeout(() => {
-      setHasCopied(false)
-    }, 1500)
-  }
+  const {
+    selectedOption,
+    setSelectedOption,
+    hasCopied,
+    handleCopyOptionToClipboard
+  } = useCopySelectToClipboard(TECHNOLOGIES_BY_FIELD)
 
   return (
     <div>
