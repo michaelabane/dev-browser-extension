@@ -6,6 +6,7 @@ import {
   HorizontalRule,
   KeywordPhrase,
   PopupContainer,
+  ProjectTitle,
   Technology
 } from "~components"
 
@@ -16,6 +17,8 @@ function IndexPopup() {
     <PopupContainer>
       <ExtensionTitle />
       <HorizontalRule marginTop={0} />
+      <ProjectTitle />
+      <HorizontalRule />
       <Technology />
       <HorizontalRule />
       <KeywordPhrase />

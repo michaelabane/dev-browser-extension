@@ -50,6 +50,32 @@ export const TECHNOLOGIES_BY_FIELD = {
   homeland_security: HOMELAND_SECURITY
 }
 
+const healthcareProjectTitle = "Revolutionizing Surgery with Nanobots"
+const agricultureProjectTitle = "AI-Driven Crop Optimization Revolution"
+const environmentProjectTitle = "Innovative Atmospheric Water Generation"
+const energyProjectTitle = "Quantum Dot Solar Cell Breakthrough"
+const spaceProjectTitle = "Autonomous Self-Healing Spacecraft Materials"
+const defenseProjectTitle = "Next-Gen Directed Energy Weapons"
+const educationProjectTitle = "Immersive AR Learning Experiences"
+const transportationProjectTitle = "Autonomous Electric Cargo Ships"
+const oceanSciencesProjectTitle = "Deep-Sea Exploration with AI Drones"
+const newMeasurementTechniquesProjectTitle = "Quantum Sensing Innovations"
+const homelandSecurityProjectTitle = "Advanced AI Biometric Screening"
+
+export const PROJECT_TITLES_BY_FIELD = {
+  healthcare: healthcareProjectTitle,
+  agriculture: agricultureProjectTitle,
+  environment: environmentProjectTitle,
+  energy: energyProjectTitle,
+  space: spaceProjectTitle,
+  defense: defenseProjectTitle,
+  education: educationProjectTitle,
+  transportation: transportationProjectTitle,
+  ocean_sciences: oceanSciencesProjectTitle,
+  measurement_techniques: newMeasurementTechniquesProjectTitle,
+  homeland_security: homelandSecurityProjectTitle
+}
+
 export const KEYWORD_PHRASES = [
   "Quantum computing applications",
   "Renewable energy sources",
