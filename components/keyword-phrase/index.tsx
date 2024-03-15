@@ -8,7 +8,7 @@ export const KeywordPhrase = () => {
 
   return (
     <div>
-      <Instructions>Copy keyword phrase</Instructions>
+      <Instructions>Keyword phrase</Instructions>
       <CopyButton onClick={handleCopyToClipboard} hasCopied={hasCopied} />
     </div>
   )

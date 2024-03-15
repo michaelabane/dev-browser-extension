@@ -10,8 +10,8 @@ export const CopyButton = (props: CopyButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className="mt-2 w-full bg-slate-200 p-1 rounded-sm">
-      {hasCopied ? "Copied!" : "Copy to Clipboard"}
+      className={`mt-2 w-full bg-slate-200 p-1 rounded-sm ${hasCopied ? "animate-pulse" : ""} hover:shadow-sm`}>
+      {hasCopied ? "Copied!" : "Copy"}
     </button>
   )
 }

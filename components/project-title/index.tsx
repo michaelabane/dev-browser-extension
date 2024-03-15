@@ -12,11 +12,11 @@ export const ProjectTitle = () => {
 
   return (
     <div>
-      <Instructions>Copy project title</Instructions>
+      <Instructions>Project title</Instructions>
       <label
         htmlFor="field-select"
         className="text-[8px] uppercase text-gray-500 mb-0 mt-1">
-        Industry Field
+        Industry
       </label>
       <select
         value={selectedOption}
