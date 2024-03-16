@@ -2,7 +2,6 @@ import React, { useState } from "react"
 
 import {
   CompanyBiography,
-  ExtensionTitle,
   HorizontalRule,
   KeywordPhrase,
   PersonalBiography,
@@ -27,8 +26,6 @@ function IndexPopup() {
   const [view, setView] = useState<"clipboard" | "settings">("clipboard")
   return (
     <PopupContainer view={view} setView={setView}>
-      <ExtensionTitle />
-      <HorizontalRule marginTop={0} />
       {view === "clipboard" &&
         featureArray.map((Component, index) => (
           <>
