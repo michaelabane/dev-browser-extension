@@ -2,11 +2,12 @@ import { Clipboard, Settings } from "lucide-react"
 import React from "react"
 
 import { ExtensionTitle } from "~components/extension-title"
+import type { View } from "~types"
 
 type PopupContainerProps = {
   children: React.ReactNode
-  view: "clipboard" | "settings"
-  setView: React.Dispatch<React.SetStateAction<"clipboard" | "settings">>
+  view: View
+  setView: React.Dispatch<React.SetStateAction<View>>
 }
 
 export const PopupContainer = (props: PopupContainerProps) => {

@@ -11,6 +11,7 @@ import {
   SiteFeedback,
   Technology
 } from "~components"
+import type { View } from "~types"
 
 import "./style.css"
 
@@ -24,7 +25,7 @@ const featureArray = [
 ]
 
 function IndexPopup() {
-  const [view, setView] = useState<"clipboard" | "settings">("clipboard")
+  const [view, setView] = useState<View>("clipboard")
   return (
     <PopupContainer view={view} setView={setView}>
       {view === "clipboard" &&

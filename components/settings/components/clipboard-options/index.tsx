@@ -9,7 +9,7 @@ const clipboardOptions = [
   },
   {
     value: "technology",
-    label: "Technology"
+    label: "Technology Description"
   },
   {
     value: "keywordPhrase",
