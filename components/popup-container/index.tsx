@@ -11,7 +11,7 @@ export const PopupContainer = (props: PopupContainerProps) => {
   const { children, setView, view } = props
   return (
     <div className="relative w-full">
-      <div className="p-4 pb-16 h-[500px] overflow-y-auto w-[250px]">
+      <div className="p-4 pb-20 h-[500px] overflow-y-auto w-[250px]">
         {children}
       </div>
       <div className="fixed bottom-0 flex flex-row justify-around align-middle p-4 w-full bg-slate-700">
