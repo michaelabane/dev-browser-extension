@@ -7,6 +7,7 @@ import {
   PersonalBiography,
   PopupContainer,
   ProjectTitle,
+  Settings,
   SiteFeedback,
   Technology
 } from "~components"
@@ -33,7 +34,7 @@ function IndexPopup() {
             {index < featureArray.length - 1 && <HorizontalRule />}
           </>
         ))}
-      {view === "settings" && <div>Settings</div>}
+      {view === "settings" && <Settings />}
     </PopupContainer>
   )
 }
