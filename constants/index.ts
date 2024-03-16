@@ -146,3 +146,9 @@ export const FEEDBACK = {
   mediocre: MEDIOCRE_FEEDBACK,
   poor: POOR_FEEDBACK
 }
+
+export const FEEDBACK_SELECT_OPTIONS = [
+  { value: "good", label: "Good" },
+  { value: "mediocre", label: "Mediocre" },
+  { value: "poor", label: "Poor" }
+]

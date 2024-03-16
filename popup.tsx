@@ -8,6 +8,7 @@ import {
   PersonalBiography,
   PopupContainer,
   ProjectTitle,
+  SiteFeedback,
   Technology
 } from "~components"
 
@@ -27,6 +28,8 @@ function IndexPopup() {
       <CompanyBiography />
       <HorizontalRule />
       <PersonalBiography />
+      <HorizontalRule />
+      <SiteFeedback />
     </PopupContainer>
   )
 }
