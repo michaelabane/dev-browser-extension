@@ -14,22 +14,26 @@ import {
 
 import "./style.css"
 
+const featureArray = [
+  ProjectTitle,
+  Technology,
+  KeywordPhrase,
+  CompanyBiography,
+  PersonalBiography,
+  SiteFeedback
+]
+
 function IndexPopup() {
   return (
     <PopupContainer>
       <ExtensionTitle />
       <HorizontalRule marginTop={0} />
-      <ProjectTitle />
-      <HorizontalRule />
-      <Technology />
-      <HorizontalRule />
-      <KeywordPhrase />
-      <HorizontalRule />
-      <CompanyBiography />
-      <HorizontalRule />
-      <PersonalBiography />
-      <HorizontalRule />
-      <SiteFeedback />
+      {featureArray.map((Component, index) => (
+        <>
+          <Component key={index} />
+          {index < featureArray.length - 1 && <HorizontalRule />}
+        </>
+      ))}
     </PopupContainer>
   )
 }
