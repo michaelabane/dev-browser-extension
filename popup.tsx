@@ -5,6 +5,7 @@ import {
   ExtensionTitle,
   HorizontalRule,
   KeywordPhrase,
+  PersonalBiography,
   PopupContainer,
   ProjectTitle,
   Technology
@@ -24,6 +25,8 @@ function IndexPopup() {
       <KeywordPhrase />
       <HorizontalRule />
       <CompanyBiography />
+      <HorizontalRule />
+      <PersonalBiography />
     </PopupContainer>
   )
 }
