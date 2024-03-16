@@ -125,3 +125,24 @@ export const COMPANY_BIOGRAPHIES = [
 
   "CyberSecure is a cutting-edge cybersecurity firm that provides advanced protection for digital assets and IT infrastructure. Using machine learning and AI, they offer real-time threat detection and response, safeguarding businesses from evolving cyber threats. CyberSecure's proactive approach ensures that companies can operate confidently in a digital landscape, protecting their data, reputation, and bottom line."
 ]
+
+export const PERSONAL_BIOGRAPHIES = [
+  "Dr. Emily Chen, with her Ph.D. in Quantum Physics from MIT, has propelled QuantumNet to the forefront of quantum computing. Her groundbreaking research, which bridges quantum mechanics and computational algorithms, has earned her numerous accolades. Under her leadership, QuantumNet has launched a cloud-based quantum computing service that's revolutionizing data analysis and problem-solving across industries, making quantum computing accessible to a broader audience and fostering innovation in fields ranging from cryptography to material science.",
+  "Marcus Johnson, an environmental engineer turned entrepreneur, founded GreenSynth to combat the petrochemical industry's environmental impact. With a master's in Chemical Engineering and a passion for sustainability, Marcus has led GreenSynth to develop bio-based alternatives to traditional chemicals, utilizing cutting-edge biotechnology. His commitment to green chemistry has not only positioned GreenSynth as a leader in sustainable manufacturing but also as a pivotal force in reducing industrial carbon footprints, promoting a cleaner future.",
+  "Dr. Anita Patel, a trailblazer in nanomedicine, founded NanoMed after a distinguished career in biomedical engineering. Her expertise in nanotechnology and its application in targeted drug delivery has positioned NanoMed at the innovation cusp, transforming patient care. Dr. Patel's leadership has steered the company towards developing nanoscale carriers that revolutionize treatment efficacy and patient comfort, marking a significant leap forward in personalized medicine and healthcare.",
+  "Alex Rivera, a former aerospace engineer with a vision for sustainable space exploration, founded AeroSpaceX. His passion for space and dedication to environmental stewardship drove him to develop eco-friendly propulsion technologies, reducing the ecological footprint of space launches. Under Alex's guidance, AeroSpaceX has become synonymous with innovation, pushing the boundaries of space technology while championing sustainability, inspiring a new generation of eco-conscious space ventures.",
+  "Jessica Li, with her background in data science and a keen entrepreneurial spirit, launched DataDive to transform big data analytics. Her expertise in machine learning and data analysis has led DataDive to offer unprecedented insights to businesses, enabling informed decision-making. Jessica's vision and leadership have not only propelled DataDive to the industry forefront but also democratized data analytics, making powerful tools accessible to businesses of all sizes, driving efficiency and innovation across sectors."
+]
+
+const GOOD_FEEDBACK =
+  "I am thoroughly impressed with the web application's intuitive design and functionality. It has become an indispensable tool in my daily research, offering comprehensive resources and seamless integration with my workflow. The user interface is clean and user-friendly, making navigation a breeze. Additionally, the platform's ability to connect me with a global network of STEM professionals has significantly enhanced my innovation process. Kudos to the team for creating such a stellar platform that truly understands and meets the needs of the STEM community."
+const MEDIOCRE_FEEDBACK =
+  "The web application has a decent array of features that support innovation in the STEM fields, but there's room for improvement. While the core functionality is there, I find the interface a bit cluttered and at times unintuitive, which can hinder the user experience. Some of the resources seem outdated, and I believe the platform could benefit from more regular updates and a cleaner, more streamlined design. It's a good starting point, but I look forward to seeing how it evolves to better meet user needs."
+const POOR_FEEDBACK =
+  "I am disappointed with this web application. It's marketed as a tool for fostering innovation, but it falls short in several areas. The interface is clunky and not at all intuitive, making it frustrating to navigate. I've encountered numerous bugs that disrupt its functionality, and the content feels sparse and not very comprehensive. For a platform that's supposed to be at the forefront of STEM innovation, it's sorely lacking in both form and substance. It needs significant improvements to be genuinely useful for professionals in the field."
+
+export const FEEDBACK = {
+  good: GOOD_FEEDBACK,
+  mediocre: MEDIOCRE_FEEDBACK,
+  poor: POOR_FEEDBACK
+}
