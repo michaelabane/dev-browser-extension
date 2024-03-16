@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import {
   CompanyBiography,
@@ -24,16 +24,19 @@ const featureArray = [
 ]
 
 function IndexPopup() {
+  const [view, setView] = useState<"clipboard" | "settings">("clipboard")
   return (
-    <PopupContainer>
+    <PopupContainer view={view} setView={setView}>
       <ExtensionTitle />
       <HorizontalRule marginTop={0} />
-      {featureArray.map((Component, index) => (
-        <>
-          <Component key={index} />
-          {index < featureArray.length - 1 && <HorizontalRule />}
-        </>
-      ))}
+      {view === "clipboard" &&
+        featureArray.map((Component, index) => (
+          <>
+            <Component key={index} />
+            {index < featureArray.length - 1 && <HorizontalRule />}
+          </>
+        ))}
+      {view === "settings" && <div>Settings</div>}
     </PopupContainer>
   )
 }
