@@ -15,12 +15,12 @@ import {
 import "./style.css"
 
 const featureArray = [
-  ProjectTitle,
-  Technology,
-  KeywordPhrase,
-  CompanyBiography,
-  PersonalBiography,
-  SiteFeedback
+  { component: ProjectTitle, key: "projectTitle" },
+  { component: Technology, key: "technology" },
+  { component: KeywordPhrase, key: "keywordPhrase" },
+  { component: CompanyBiography, key: "companyBiography" },
+  { component: PersonalBiography, key: "personalBiography" },
+  { component: SiteFeedback, key: "siteFeedback" }
 ]
 
 function IndexPopup() {
@@ -28,9 +28,9 @@ function IndexPopup() {
   return (
     <PopupContainer view={view} setView={setView}>
       {view === "clipboard" &&
-        featureArray.map((Component, index) => (
+        featureArray.map((component, index) => (
           <>
-            <Component key={index} />
+            <component.component key={component.key} />
             {index < featureArray.length - 1 && <HorizontalRule />}
           </>
         ))}
