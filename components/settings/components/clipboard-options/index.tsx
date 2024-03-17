@@ -1,64 +1,13 @@
-import React, { useEffect, useState } from "react"
+import React, { memo } from "react"
 
-import { Button } from "~components"
+type ClipboardOptionsProps = {
+  clipboardOptions: { value: string; label: string }[]
+  checked: string[]
+  setChecked: React.Dispatch<React.SetStateAction<string[]>>
+}
 
-const clipboardOptions = [
-  {
-    value: "projectTitle",
-    label: "Project Title"
-  },
-  {
-    value: "technology",
-    label: "Technology Description"
-  },
-  {
-    value: "keywordPhrase",
-    label: "Keyword Phrase"
-  },
-  {
-    value: "companyBiography",
-    label: "Company Biography"
-  },
-  {
-    value: "personalBiography",
-    label: "Personal Biography"
-  },
-  {
-    value: "siteFeedback",
-    label: "Site Feedback"
-  }
-]
-
-const initialState = clipboardOptions.map((option) => option.value)
-
-export const ClipboardOptions = () => {
-  const [checked, setChecked] = useState<string[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [isSaved, setIsSaved] = useState(false)
-
-  useEffect(() => {
-    chrome.storage.sync.get(["clipboardOptions"], (result) => {
-      setChecked(result.clipboardOptions || initialState)
-      setIsLoading(false)
-    })
-  }, [])
-
-  const handleSave = () => {
-    setIsSaved(true)
-    setTimeout(() => {
-      setIsSaved(false)
-    }, 1500)
-  }
-
-  const handleSaveToStorage = () => {
-    chrome.storage.sync.set({ clipboardOptions: checked }, () => {
-      handleSave()
-    })
-  }
-
-  if (isLoading) {
-    return <p>Loading...</p>
-  }
+export const ClipboardOptions = memo((props: ClipboardOptionsProps) => {
+  const { clipboardOptions, checked, setChecked } = props
 
   return (
     <div>
@@ -89,12 +38,6 @@ export const ClipboardOptions = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-row justify-center mt-2">
-        <Button
-          text={isSaved ? "Saved!" : "Save"}
-          onClick={handleSaveToStorage}
-        />
-      </div>
     </div>
   )
-}
+})

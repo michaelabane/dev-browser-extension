@@ -1,36 +1,19 @@
-import React, { useEffect, useState } from "react"
+import React, { memo } from "react"
 
-import { Button, FieldSelect } from "~components"
+import { FieldSelect } from "~components"
 import { SELECT_OPTIONS } from "~constants"
 
-export const IndustryField = () => {
-  const [defaultIndustry, setDefaultIndustry] = useState("random")
-  const [isSaved, setIsSaved] = useState(false)
+type IndustryFieldProps = {
+  defaultIndustry: string
+  setDefaultIndustry: React.Dispatch<React.SetStateAction<string>>
+}
+
+export const IndustryField = memo((props: IndustryFieldProps) => {
+  const { defaultIndustry, setDefaultIndustry } = props
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setDefaultIndustry(e.target.value)
   }
-
-  //move to hook
-  const handleSave = () => {
-    setIsSaved(true)
-    setTimeout(() => {
-      setIsSaved(false)
-    }, 1500)
-  }
-
-  const handleSaveToStorage = () => {
-    chrome.storage.sync.set({ defaultIndustry }, () => {
-      handleSave()
-    })
-  }
-
-  useEffect(() => {
-    chrome.storage.sync.get(["defaultIndustry"], (result) => {
-      if (!result.defaultIndustry) return
-      setDefaultIndustry(result.defaultIndustry)
-    })
-  }, [])
 
   return (
     <div>
@@ -42,12 +25,6 @@ export const IndustryField = () => {
           onChange={handleChange}
         />
       </div>
-      <div className="flex flex-row justify-center mt-2">
-        <Button
-          text={isSaved ? "Saved!" : "Save"}
-          onClick={handleSaveToStorage}
-        />
-      </div>
     </div>
   )
-}
+})
