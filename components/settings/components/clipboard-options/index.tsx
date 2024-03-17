@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import { Button } from "~components"
 
@@ -32,7 +32,34 @@ const clipboardOptions = [
 const initialState = clipboardOptions.map((option) => option.value)
 
 export const ClipboardOptions = () => {
-  const [checked, setChecked] = useState<string[]>(initialState)
+  const [checked, setChecked] = useState<string[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [isSaved, setIsSaved] = useState(false)
+
+  useEffect(() => {
+    chrome.storage.sync.get(["clipboardOptions"], (result) => {
+      setChecked(result.clipboardOptions || initialState)
+      setIsLoading(false)
+    })
+  }, [])
+
+  const handleSave = () => {
+    setIsSaved(true)
+    setTimeout(() => {
+      setIsSaved(false)
+    }, 1500)
+  }
+
+  const handleSaveToStorage = () => {
+    chrome.storage.sync.set({ clipboardOptions: checked }, () => {
+      handleSave()
+    })
+  }
+
+  if (isLoading) {
+    return <p>Loading...</p>
+  }
+
   return (
     <div>
       <p>Show the following in clipboard:</p>
@@ -63,7 +90,10 @@ export const ClipboardOptions = () => {
         ))}
       </div>
       <div className="flex flex-row justify-center mt-2">
-        <Button text="Save" onClick={() => console.log(checked)} />
+        <Button
+          text={isSaved ? "Saved!" : "Save"}
+          onClick={handleSaveToStorage}
+        />
       </div>
     </div>
   )

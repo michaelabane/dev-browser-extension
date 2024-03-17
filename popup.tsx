@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import {
   CompanyBiography,
@@ -15,7 +15,12 @@ import type { View } from "~types"
 
 import "./style.css"
 
-const featureArray = [
+type Feature = {
+  component: () => React.JSX.Element
+  key: string
+}
+
+const featureArray: Feature[] = [
   { component: ProjectTitle, key: "projectTitle" },
   { component: Technology, key: "technology" },
   { component: KeywordPhrase, key: "keywordPhrase" },
@@ -26,13 +31,23 @@ const featureArray = [
 
 function IndexPopup() {
   const [view, setView] = useState<View>("clipboard")
+  const [renderedArray, setRenderedArray] = useState<Feature[]>(featureArray)
+
+  chrome.storage.sync.get(["clipboardOptions"], (result) => {
+    if (!result.clipboardOptions) return
+    const newRenderedArray = featureArray.filter((feature) =>
+      result.clipboardOptions.includes(feature.key)
+    )
+    setRenderedArray(newRenderedArray)
+  })
+
   return (
     <PopupContainer view={view} setView={setView}>
       {view === "clipboard" &&
-        featureArray.map((component, index) => (
+        renderedArray.map((component, index) => (
           <>
             <component.component key={component.key} />
-            {index < featureArray.length - 1 && <HorizontalRule />}
+            {index < renderedArray.length - 1 && <HorizontalRule />}
           </>
         ))}
       {view === "settings" && <Settings />}
