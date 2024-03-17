@@ -2,7 +2,7 @@ import React from "react"
 
 import { HorizontalRule, Instructions } from "~components"
 
-import { ClipboardOptions } from "./components"
+import { ClipboardOptions, IndustryField } from "./components"
 
 export const Settings = () => {
   return (
@@ -10,6 +10,8 @@ export const Settings = () => {
       <Instructions>Settings</Instructions>
       <HorizontalRule />
       <ClipboardOptions />
+      <HorizontalRule />
+      <IndustryField />
     </div>
   )
 }

@@ -23,6 +23,11 @@ export const useCopySelectToClipboard = (textObject: {
     }, 1500)
   }
 
+  chrome.storage.sync.get(["defaultIndustry"], (result) => {
+    if (!result.defaultIndustry) return
+    setSelectedOption(result.defaultIndustry)
+  })
+
   return {
     selectedOption,
     hasCopied,
