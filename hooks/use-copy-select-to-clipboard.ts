@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import { SELECT_OPTIONS } from "~constants"
 
@@ -24,10 +24,12 @@ export const useCopySelectToClipboard = (textObject: {
     }, 1500)
   }
 
-  chrome.storage.sync.get(["defaultIndustry"], (result) => {
-    if (!result.defaultIndustry) return
-    setSelectedOption(result.defaultIndustry)
-  })
+  useEffect(() => {
+    chrome.storage.sync.get(["defaultIndustry"], (result) => {
+      if (!result.defaultIndustry) return
+      setSelectedOption(result.defaultIndustry)
+    })
+  }, [])
 
   return {
     selectedOption,
