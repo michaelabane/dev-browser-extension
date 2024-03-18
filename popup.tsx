@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
 import {
   CompanyBiography,
   HorizontalRule,
   KeywordPhrase,
+  Notes,
   PersonalBiography,
   PopupContainer,
   ProjectTitle,
@@ -26,7 +27,8 @@ const featureArray: Feature[] = [
   { component: KeywordPhrase, key: "keywordPhrase" },
   { component: CompanyBiography, key: "companyBiography" },
   { component: PersonalBiography, key: "personalBiography" },
-  { component: SiteFeedback, key: "siteFeedback" }
+  { component: SiteFeedback, key: "siteFeedback" },
+  { component: Notes, key: "notes" }
 ]
 
 function IndexPopup() {

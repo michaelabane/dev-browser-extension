@@ -28,6 +28,10 @@ const clipboardOptions = [
   {
     value: "siteFeedback",
     label: "Site Feedback"
+  },
+  {
+    value: "notes",
+    label: "Notes"
   }
 ]
 
@@ -78,8 +82,8 @@ export const Settings = () => {
         defaultIndustry={defaultIndustry}
         setDefaultIndustry={setDefaultIndustry}
       />
-      <HorizontalRule />
-      <div className="flex flex-row justify-center mt-2">
+      <HorizontalRule marginBottom={4} />
+      <div className="flex flex-row justify-center">
         <Button
           text={isSaved ? "Saved!" : "Save"}
           onClick={handleSaveSettings}
