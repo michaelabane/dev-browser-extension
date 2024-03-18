@@ -87,6 +87,7 @@ export const Settings = () => {
         <Button
           text={isSaved ? "Saved!" : "Save"}
           onClick={handleSaveSettings}
+          loading={isSaved}
         />
       </div>
     </div>
