@@ -7,22 +7,16 @@ export const Notes = () => {
 
   const handleNotesChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setNotes(event.target.value)
+    chrome.storage.local.set({ notes: event.target.value })
   }
 
   useEffect(() => {
-    chrome.storage.sync.get(["notes"], (result) => {
+    chrome.storage.local.get(["notes"], (result) => {
       if (result.notes) {
         setNotes(result.notes)
       }
     })
   }, [])
-
-  useEffect(() => {
-    const saveNotes = () => {
-      chrome.storage.sync.set({ notes })
-    }
-    return () => saveNotes()
-  }, [notes])
 
   return (
     <div>
