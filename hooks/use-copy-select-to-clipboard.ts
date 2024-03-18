@@ -12,7 +12,8 @@ export const useCopySelectToClipboard = (textObject: {
     let textToCopy = ""
     if (selectedOption === "random") {
       const randomIndex = Math.floor(Math.random() * SELECT_OPTIONS.length)
-      textToCopy = textObject[SELECT_OPTIONS[randomIndex].value]
+      textToCopy =
+        textObject[SELECT_OPTIONS[randomIndex === 0 ? 1 : randomIndex].value]
     } else {
       textToCopy = textObject[selectedOption]
     }
