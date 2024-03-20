@@ -1,3 +1,4 @@
+import { Moon, Sun } from "lucide-react"
 import { useEffect, useState } from "react"
 
 import { Button } from "~components"
@@ -30,7 +31,8 @@ export const ThemeToggle = () => {
   return (
     <Button
       onClick={toggleDarkMode}
-      text={`Toggle ${darkMode ? "Light" : "Dark"} Mode`}
+      text=""
+      initialIcon={darkMode ? <Sun className="text-yellow-500" /> : <Moon />}
     />
   )
 }
