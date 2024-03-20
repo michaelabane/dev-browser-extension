@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 import {
   CompanyBiography,
@@ -34,6 +34,16 @@ const featureArray: Feature[] = [
 function IndexPopup() {
   const [view, setView] = useState<View>("clipboard")
   const [renderedArray, setRenderedArray] = useState<Feature[]>(featureArray)
+
+  useEffect(() => {
+    chrome.storage.local.get(["darkMode"], function (result) {
+      if (result.darkMode) {
+        document.documentElement.classList.add("dark")
+      } else {
+        document.documentElement.classList.remove("dark")
+      }
+    })
+  }, [])
 
   chrome.storage.sync.get(["clipboardOptions"], (result) => {
     if (!result.clipboardOptions) return
