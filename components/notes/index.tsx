@@ -22,7 +22,7 @@ export const Notes = () => {
     <div>
       <Instructions>Notes</Instructions>
       <textarea
-        className="w-full p-2 mt-2 border border-gray-300 rounded-md"
+        className="w-full p-2 mt-2 border border-gray-300 rounded-md dark:bg-slate-500 dark:border-slate-400"
         rows={5}
         placeholder="Type your notes here"
         value={notes}

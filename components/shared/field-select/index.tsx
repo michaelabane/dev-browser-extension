@@ -20,13 +20,13 @@ export const FieldSelect = memo((props: FieldSelectProps) => {
     <>
       <label
         htmlFor="field-select"
-        className="text-[8px] uppercase text-gray-500 mb-0 mt-1">
+        className="text-[8px] uppercase text-gray-500 dark:text-gray-200 mb-0 mt-1">
         {label}
       </label>
       <select
         value={value}
         onChange={onChange}
-        className="w-full bg-slate-100 p-1 rounded-sm"
+        className="w-full bg-slate-100 dark:bg-slate-500 p-1 rounded-sm"
         id="field-select">
         {options.map((option) => (
           <option key={option.value} value={option.value}>

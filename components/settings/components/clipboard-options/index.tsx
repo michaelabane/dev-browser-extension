@@ -32,7 +32,7 @@ export const ClipboardOptions = memo((props: ClipboardOptionsProps) => {
             />
             <label
               htmlFor={option.value}
-              className="uppercase text-slate-600 cursor-pointer">
+              className="uppercase text-slate-600 dark:text-slate-200 cursor-pointer">
               {option.label}
             </label>
           </div>

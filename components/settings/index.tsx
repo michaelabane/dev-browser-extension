@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 
 import { Button, HorizontalRule, Instructions } from "~components"
 
-import { ClipboardOptions, IndustryField } from "./components"
+import { ClipboardOptions, IndustryField, ThemeToggle } from "./components"
 
 const clipboardOptions = [
   {
@@ -90,6 +90,8 @@ export const Settings = () => {
           loading={isSaved}
         />
       </div>
+      <HorizontalRule />
+      <ThemeToggle />
     </div>
   )
 }

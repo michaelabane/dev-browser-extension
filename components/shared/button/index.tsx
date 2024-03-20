@@ -13,7 +13,7 @@ export const Button = (props: ButtonProps) => {
     <button
       disabled={disabled}
       onClick={loading ? null : onClick}
-      className={`mt-2 py-2 w-full flex flex-row gap-2 align-middle justify-center bg-slate-200 p-1 rounded-sm hover:shadow-sm uppercase ${loading ? "animate-pulse" : ""}`}>
+      className={`mt-2 py-2 w-full flex flex-row gap-2 align-middle justify-center bg-slate-200 dark:bg-slate-900 p-1 rounded-sm hover:shadow-sm uppercase ${loading ? "animate-pulse" : ""}`}>
       {text}
     </button>
   )
