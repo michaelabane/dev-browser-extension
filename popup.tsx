@@ -37,10 +37,23 @@ function IndexPopup() {
 
   useEffect(() => {
     chrome.storage.local.get(["darkMode"], function (result) {
-      if (result.darkMode) {
-        document.documentElement.classList.add("dark")
+      if (result.darkMode !== undefined) {
+        // Use the stored preference if it exists
+        if (result.darkMode) {
+          document.documentElement.classList.add("dark")
+        } else {
+          document.documentElement.classList.remove("dark")
+        }
       } else {
-        document.documentElement.classList.remove("dark")
+        // If there's no stored preference, use the browser's (system's) preference
+        if (
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+          document.documentElement.classList.add("dark")
+        } else {
+          document.documentElement.classList.remove("dark")
+        }
       }
     })
   }, [])
